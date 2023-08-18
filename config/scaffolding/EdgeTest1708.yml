@@ -1,6 +1,45 @@
 version: "1.0"
 info:
   model: int-scaffold
+services:
+- serviceName: edge.test1708.integrations:dataBaseEdgeFlowService1
+  packages:
+  - name: EdgeTest1708
+    version: "1.0"
+- serviceName: edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:select
+  packages:
+  - name: EdgeTest1708
+    version: "1.0"
+configurationVariables:
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.oracle.OracleDataSource
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.databaseName
+  : ORCL
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.serverName
+  : adapter-oracle-121-on-amazonrds.cdmjexwbzoym.us-east-1.rds.amazonaws.com
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.dbType
+  : ORACLE
+  artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionEnabled: "false"
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.keyStore
+  : ""
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.trustStore
+  : ""
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.user
+  : JDBC_BVT
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.otherProperties
+  : driverType=thin;
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.password
+  : "{AES}aYrXC43dTWsDUHRWG5mhTA=="
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.portNumber
+  : "1521"
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.EdgeTest1708.edge.test1708.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DbOracle.connectionSettings.transactionType
+  : NO_TRANSACTION
 packages:
 - name: EdgeTest1708
   gitServerName: testEdge
